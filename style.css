@@ -1,0 +1,80 @@
+p{
+    text-align: center;
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: brown;
+    text-decoration-line:underline ;
+}
+p.defotto{
+    text-align: center;
+    font-size: small;
+    color: purple;
+}
+p.tip{
+    text-align: center;
+    font-size: small;
+    color: blue;
+}
+header{
+    background-color: aqua;
+}
+img{
+    object-fit: fill;
+    height: 150px;
+    width: 225px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+img.pvdiag{
+    object-fit: fill;
+    height: 250px;
+    width: 420px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    text-align: center;
+}
+table{
+    margin:auto; 
+    align-items:stretch;
+}
+input{
+    border-radius: 25px;
+    margin: 10px;
+    font-size: large;
+    width: 300px;
+    height: 30px;
+    border-color: blueviolet;
+}
+button{
+    border-radius: 20px;
+    font-size: 20px;
+    background: greenyellow;
+    width: 30px;
+    height: 30px;
+}
+button.dieseleffclick{
+    border-radius: 20px;
+    font-size: 20px;
+    background: greenyellow;
+    width: 400px;
+    height: 30px;
+}
+.container1{
+    text-align: center;
+}
+.container2{
+    text-align: center;
+}
+button.dualeffclick{
+    border-radius: 20px;
+    font-size: 20px;
+    background: greenyellow;
+    width: 400px;
+    height: 30px;
+}

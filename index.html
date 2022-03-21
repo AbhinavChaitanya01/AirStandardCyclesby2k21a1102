@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirStandardCycles</title>
+    <header>
+        <p>AIR STANDARD CYCLES</p>
+        <div><img src="https://cdn.dribbble.com/users/207059/screenshots/1766420/media/aa2fc8c08d2202d2c2ee882b08163c4b.gif" width="100px" height="100px"></div>
+    </header>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="tip"> Tip : Use only one of the simulators at a time.</p>
+    <br>
+    <p class="tip">The efficiency obtained is just theoretical and in accordance to the assumptions. Air has been taken as the working fluid and is treated as an ideal gas. All processes are taken to be internally reversible.</p>
+    <p>
+        AIR STANDARD OTTO CYCLE
+    </p>
+    <br>
+    <p class="defotto">The Compression Ratio R<sub>c</sub> is the ratio of Total volume to Clearance volume. Clearance volume is the minimum volume of clearance between the cyclinder head and the piston when it is at the extreme position near to the head of verical cylinder (also caled TOP DEAD CENTRE).Also, we know that the heat capacity ratio (&gamma;) for air is 1.4</p>
+    <img src="https://mechanicalboost.com/wp-content/uploads/2021/08/PV-diagram-of-Otto-Cycle.jpg" alt="failed to load image" class=" pvdiag">
+    <br>
+    <div class="container"> 
+        The Efficiency n<sub>the</sub> is:<input type="text" name="output" id="screen" placeholder="Enter Compression Ratio (Rc) Here">%
+        <table>
+            <tr>
+             <td><button>C</button></td>
+             <td><button>=</button></td>
+             <td><button>.</button></td>
+            </tr>
+            <tr>
+             <td><button>7</button></td>
+             <td><button>8</button></td>
+             <td><button>9</button></td>
+            </tr>
+            <tr>
+             <td><button>4</button></td>
+             <td><button>5</button></td>
+             <td><button>6</button></td>
+            </tr>
+            <tr>
+             <td><button>3</button></td>
+             <td><button>2</button></td>
+             <td><button>1</button></td>
+            </tr>
+            <tr>
+             <td><button>0</button></td>
+            </tr>
+        </table> 
+     </div>
+    <br>
+    <p class="defotto">Ideal maximum efficiency is 56% appx. Formula used here is n<sub>the</sub>= 1-(1/R<sub>c</sub>)<sup>&gamma;-1</sup></p>
+    <hr>
+   </div>
+   <p>
+       AIR STANDARD DIESEL CYCLE
+   </p>
+   <br>
+   <div class="container1">
+    <p class="defotto">
+        Cut-off ratio (&rho;) is the ratio of the volume after combustion to the volume before combustion.
+        The thermal efficiency approaches maximum when the cut-off ratio is equal to unity. This approaches to the efficiency of otto cycle.
+        The compression ratio for diesel cycle varies between 14 to 18.
+    </p>
+    <img src="https://www.mechanicalbooster.com/wp-content/uploads/2017/10/Dieselcycleworkingprocess-e1591892297266.png" alt="Can't load image" class="pvdiag">
+    <input type="text" id="text1" placeholder="Enter cutoff ratio here">
+    <input type="text" id="text2" placeholder="Enter compression ratio here">
+    <button class="dieseleffclick" onclick="diesel()" name="btn">Click to get efficiency!</button>
+    <br>
+    The Efficiency n<sub>the</sub> is:<input type="text" id="text3">%
+   </div>
+   <script>
+       function diesel(){
+        var rho= document.getElementById('text1').value;
+       var aarcee= document.getElementById('text2').value;
+       var rhn=Number(rho)-1;
+       var rc=Math.pow(Number(aarcee),0.4); var rh=Math.pow(Number(rho),1.4)-1;
+       var eff=(1-rh/(rc*rhn*1.4))*100;
+       document.getElementById('text3').value=eff;
+       }
+   </script>
+   <hr>
+   <p>
+    AIR STANDARD DUAL CYCLE
+   </p>
+   <br>
+   <p class="defotto">This cycle is a combination of otto and diesel cycles. It is also called semi-diesel cycle. Ideal dual cycle consists of two reversible isentropic processes, two constant volume processes and one constant pressure process, as shown.</p>
+   <div class="container2">
+       <img src="https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-93919-3_14/MediaObjects/331627_2_En_14_Fig22_HTML.png" alt="Default" class="pvdiag">
+       <input type="text" id="text4" placeholder="Enter Compression Ratio">
+       <input type="text" id="text5" placeholder="Enter Pressure Ratio">
+       <input type="text" id="text6" placeholder="Enter Cutoff Ratio">
+       <button class="dualeffclick" onclick="dual()" name="dualeff">Click to get efficiency!</button>
+       <br>
+       The Efficiency n<sub>the</sub> is:<input type="text" id="text7">%
+   </div>
+   <script>
+    function dual(){
+
+        var com= document.getElementById('text4').value;
+        var pre= document.getElementById('text5').value;
+        var cut= document.getElementById('text6').value;
+        var mho=Number(pre)*Math.pow(Number(cut),1.4) -1;
+        var co= Number(com);
+        var niu= Math.pow(co,0.4)*((Number(pre)-1)+1.4*Number(pre)*(Number(cut)-1))
+        var finale= (1-mho/niu)*100
+        document.getElementById('text7').value=finale;
+    }
+    </script>
+   <hr><hr>
+    <footer>
+        <p>
+           &copy; This simulation of Air Standard Cycles has been created by Abhinav Chaitanya.
+           <br>
+            Roll number-DTU/2k21/A11/02 
+        </p>
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
